@@ -7,7 +7,12 @@ export function returnFs(endpoint) {
     try {
 	response.setHeader('Content-type', 'text/html');
 	response.statusCode = 200;
-	response.write('<nav>');
+	response.write('<!DOCTYPE html>');
+	response.write('<head>');
+	response.write('<script src="/js/index.js"></script>');
+	response.write('</head>');
+	response.write('<body>');
+	response.write('<nav id="fs">');
 	response.write('<ul>');
 	let directory = fs.readdirSync(endpoint);
 	for (let a in directory) {
@@ -29,6 +34,7 @@ export function returnFs(endpoint) {
     } catch(e) {
 	console.error(e);
     }
+    response.write('</body>');
     response.write('</ul>');
     response.write('</nav>');
     response.end();

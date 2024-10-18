@@ -1,0 +1,148 @@
+@charset 'utf-8';
+/* PAGES */
+body.Pages {
+    background-image: url('/img/html5.webp');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+/* END PAGES */
+main{}
+/* DIR */
+header#mkt {
+    height: 200px;
+}
+body.Main {
+    background-image: url('/img/bkg_node.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+main section#menu {
+    width: 250px;
+    padding: 50px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 100px;
+}
+main section#menu button#menu {
+    width: 250px;
+    height: 40px;
+    margin: 20px 0px;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 1px 15px purple;
+    background-color: rgba(255,0,0,.4);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 18pt;
+    transition: 0.5s;
+}
+main section#menu button#menu:hover {
+    background-color: rgba(255,0,0,.1);
+    transform: scale(1.1);
+}
+main section#menu div#menu{
+    padding: 5px;
+    background-color: rgba(255,255,255,.2);
+}
+main section#menu div#menu h2 {
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    font-weight: bold;
+    font-size: 30pt;
+}
+main section#menu div#menu nav#fs ul {
+    list-style: none;
+}
+main section#menu div#menu nav#fs ul li {
+    width: 200px;
+    height: 40px;
+    
+}
+main section#menu div#menu nav#fs ul li a {
+    display: block;
+    text-decoration: none;
+}
+
+main section#menu div#menu nav#fs ul li a.dir {
+    font-family: "Black Han Sans", sans-serif;
+    color: darkblue;
+}
+main section#menu div#menu nav#fs ul li a.file {
+    color: black;
+    font-family: "Audiowide", sans-serif;
+}
+div.show {
+    display: none;
+}
+/* END DIR */
+
+/*HTML*/
+body.HTML {
+    background-image: url('/img/form.jpeg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+body.HTML main {
+    width: 100%;
+    float: right;
+}
+body.HTML main section#menu {
+    width: 200px;
+    background-color: rgba(255,252,127,.8);
+    float: left;
+}
+body.HTML main section#menu button#menu {
+    width: 200px;
+}
+body.HTML main section#form {
+    width: 70%;
+    float: left;
+    position: relative;
+}
+body.HTML main section#form div {
+    width: 800px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+body.HTML main section#form div form fieldset legend {
+    font-family: "Audiowide", sans-serif;
+    font-size: 25pt;
+    color: white;
+}
+body.HTML main section#form div form fieldset table {
+    background-color: rgba(125,125,125,.8);
+    width: 100%;
+    padding: 10px;
+}
+body.HTML main section#form div form fieldset table tr td {
+    padding: 10px;
+}
+body.HTML main section#form div form fieldset table tr td label {
+    display: block;
+    padding: 10px 0px;
+    font-family: "Black Han Sans", sans-serif;
+}
+body.HTML main section#form div form fieldset table tr td input {
+    width: 90%;
+}
+body.HTML main section#form div form fieldset table tr td select {
+    cursor: pointer;
+}
+body.HTML main section#form div form fieldset table tr td input, body.HTML main section#form div form fieldset table tr td select {
+    height: 35px;
+    font-size: 14pt;
+    font-family: "Poppins", sans-serif;
+}
+body.HTML main section#form div form input {
+    width: 100%;
+    height: 45px;
+    margin-top: 40px;
+    margin: auto;
+}
+
+
+
+
+
