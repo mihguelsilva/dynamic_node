@@ -104,15 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
 	main.append(document.body.firstElementChild);
     };
     // header
-    let headerMkt = document.createElement('header');
-    headerMkt.setAttribute('id', 'mkt');
-    let sectionNavigator = document.querySelector('section#navigator');
-    let figureImages = document.createElement('figure');
-    figureImages.setAttribute('id', 'header-images');
-    sectionNavigator.append(figureImages);
-    headerMkt.append(sectionNavigator);
-    document.body.insertBefore(headerMkt, document.body.firstElementChild);
-
+    let headerGenerate = document.createElement('header');
+    headerGenerate.setAttribute('id', 'generate');
+    if (window.location.href == "/") {
+	let headerMkt = document.createElement('header');
+	headerMkt.setAttribute('id', 'mkt');
+	let sectionNavigator = document.querySelector('section#navigator');
+	let figureImages = document.createElement('figure');
+	figureImages.setAttribute('id', 'header-images');
+	sectionNavigator.append(figureImages);
+	headerMkt.append(sectionNavigator);
+	document.body.insertBefore(headerMkt, document.body.firstElementChild);
+    };
+    document.body.insertBefore(headerGenerate, document.body.firstElementChild);
     document.body.append(main);
 
     buttonShow.addEventListener('click', function() {

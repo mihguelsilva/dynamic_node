@@ -201,6 +201,9 @@ body.HTML {
     background-size: 100% 100%;
     background-attachment: fixed;
 }
+body.HTML header#generate {
+    height: 200px;
+}
 body.HTML main {
     width: 100%;
     float: right;
@@ -259,8 +262,3 @@ body.HTML main section#form div form input {
     margin-top: 40px;
     margin: auto;
 }
-
-
-
-
-
