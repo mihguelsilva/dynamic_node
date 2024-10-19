@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // main
     let main = document.createElement('main');
 
-    let sectionMenu = document.createElement('section')
+    let sectionMenu = document.createElement('section');
     sectionMenu.setAttribute('id', 'menu');
     let h2Fs = document.createElement('h2');
     h2Fs.setAttribute('id', 'fs');
@@ -106,6 +106,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // header
     let headerMkt = document.createElement('header');
     headerMkt.setAttribute('id', 'mkt');
+    let sectionNavigator = document.querySelector('section#navigator');
+    let figureImages = document.createElement('figure');
+    figureImages.setAttribute('id', 'header-images');
+    sectionNavigator.append(figureImages);
+    headerMkt.append(sectionNavigator);
     document.body.insertBefore(headerMkt, document.body.firstElementChild);
 
     document.body.append(main);
@@ -116,5 +121,19 @@ document.addEventListener('DOMContentLoaded', function() {
 	} else {
 	    divMenu.style.display = 'none';
 	}
+    });
+
+    let liBase = document.querySelectorAll('li.base');
+    liBase.forEach(function(element, index) {
+	element.addEventListener('click', function(e) {
+	    if (e.target.firstElementChild) {
+		let navSub = e.target.firstElementChild;
+		if (getComputedStyle(navSub).display == "none") {
+		    navSub.style.display = "block";
+		} else {
+		    navSub.style.display = "none";
+		}
+	    }
+	});
     });
 });

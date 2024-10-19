@@ -1,4 +1,8 @@
-@charset 'utf-8';
+@charset "utf-8";
+* {
+    padding: 0px;
+    margin: 0px;
+}
 /* PAGES */
 body.Pages {
     background-image: url('/img/html5.webp');
@@ -8,8 +12,42 @@ body.Pages {
 /* END PAGES */
 main{}
 /* DIR */
+@keyframes background-navigator {
+    0% {
+	background-color: rgba(255,255,255,.1);
+    }
+    12.5% {
+	background-color: rgba(1,1,1,.3);
+    }
+    25% {
+	background-color: rgba(255,255,0,.3);
+    }
+    37.5% {
+	background-color: rgba(255,0,0,.3);
+    }
+    50% {
+	background-color: rgba(125, 125, 125,.3);
+    }
+    62.5% {
+	background-color: rgba(125,125,0,.3);
+    }
+    75% {
+	background-color: rgba(125,0,0,.3);
+    }
+    87.5% {
+	background-color: rgba(55,55,55,.3);
+    }
+    100% {
+	background-color: rgba(55,0,0,.3);
+    }
+}
 header#mkt {
-    height: 200px;
+    width: 100%;
+    height: 400px;
+    animation-name: background-navigator;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
 }
 body.Main {
     background-image: url('/img/bkg_node.jpg');
@@ -74,6 +112,86 @@ main section#menu div#menu nav#fs ul li a.file {
 }
 div.show {
     display: none;
+}
+@keyframes image-navigator {
+    0% {
+	background-image: url('/img/gnu-green.png');
+    }
+    25% {
+	background-image: url('/img/gnu-hacker.webp');
+    }
+    50% {
+	background-image: url('/img/gnu-phrase.webp');
+    }
+    75% {
+	background-image: url('/img/gnu-logo.jpg');
+    }
+    100% {
+	background-image: url('/img/gnu-logo.jpg');
+    }
+}
+
+section#navigator {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+section#navigator figure#header-images {
+    background-image: url('/img/gnu-logo.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin: auto;
+    height: 95%;
+    animation-name: image-navigator;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+section#navigator nav.base {
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    background-color: rgba(1,1,1,.3);
+}
+section#navigator nav ul {
+    list-style: none;
+}
+section#navigator nav.base ul li {
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(1,1,1,.8);
+    color: rgba(255,255,255,.8);
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+section#navigator nav.base ul li:hover {
+    background-color: rgba(255,0,0,.5);
+}
+section#navigator nav ul li nav.sub {
+    display: none;
+    height: 0px;
+}
+section#navigator nav ul li nav.sub ul {
+    list-style: none;
+    height: 0px;
+}
+section#navigator nav ul li nav.sub ul li {
+    float: right;
+    width: 100%;
+}
+section#navigator nav ul li nav.sub ul li a {
+    display: block;
+    text-align: center;
+    background-color: rgba(125,253,92,.5);
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
 }
 /* END DIR */
 
